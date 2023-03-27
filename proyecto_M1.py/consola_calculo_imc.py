@@ -1,5 +1,6 @@
 import calculadora_indices as calc
 
+#Se crea el modulo para interactuar con el usuario y se reciben los parametros peso y altura para obtener el IMC (indice de masa corporal)
 def calculo_imc():
     print("En esta función se va calcular el índice de masa corporal de una persona. \n")
     peso = float(input("Ingrese el peso de la persona (en kilogramos):"))
@@ -7,8 +8,9 @@ def calculo_imc():
     IMC = calc.calcular_IMC(peso, altura)
     print("El índice de masa corporal de la persona es:",round(IMC,2),"\n")
 
-#########################################################################################
+############################################################################################################################################
 
+#Se crea el modulo para interactuar con el usuario y se reciben los parametros peso, altura, edad, y valor_genero para calcular el porcentaje de grasa en la persona
 def calculo_porcentaje_grasa():
     print("En esta función se va calcular el porcentaje de grasa de una persona. \n")
     peso = float(input("Ingrese el peso de la persona (en kilogramos):"))
@@ -18,8 +20,9 @@ def calculo_porcentaje_grasa():
     GC = calc.calcular_porcentaje_grasa(peso, altura, edad, valor_genero)
     print("El porcentaje de grasa que tiene el cuerpo de la persona es:",round(GC,2),"% \n")
 
-########################################################################################
+############################################################################################################################################
 
+#Se crea el modulo para interactuar con el usuario y se reciben los parametros peso, altura, edad, y valor_genero para calcular la cantidad de calorias que quema una persona en reposo
 def calculo_calorias_reposo():
     print("En esta función se va calcular la cantidad de calorías que una persona quema estando en reposo (esto es, su tasa metabólica basal). \n")
     peso = float(input("Ingrese el peso de la persona (en kilogramos):"))
@@ -29,8 +32,9 @@ def calculo_calorias_reposo():
     TMB = calc.calcular_calorias_en_reposo(peso, altura, edad, valor_genero)
     print("La cantidad de calorias que la persona quema en reposo es:",TMB,"cal \n")
 
-########################################################################################
+############################################################################################################################################
 
+#Se crea el modulo para interactuar con el usuario y se reciben los parametros peso, altura, edad, valor_genero, y valor_actividad para calcular la cantidad de calorias que quema una persona en actividad
 def calculo_calorias_en_actividad():
     print("En esta función se va calcular la cantidad de calorías que una persona quema al realizar algún tipo de actividad física. \n")
     peso = float(input("Ingrese el peso de la persona (en kilogramos):"))
@@ -46,8 +50,9 @@ def calculo_calorias_en_actividad():
     TMB = calc.calcular_calorias_en_actividad(peso, altura, edad, valor_genero, valor_actividad)
     print("La cantidad de calorías que una persona quema, al realizar algún tipo de actividad física semanalmente es:",round(TMB,2),"cal \n")
 
-########################################################################################
+############################################################################################################################################
 
+#Se crea el modulo para interactuar con el usuario y se reciben los parametros peso, altura, edad, y valor_genero para calcular la cantidad que una persona debe consumir para adelgazar
 def calculo_calorias_adelgazar():
     print("En esta función se va calcular el rango de calorías recomendado, que debe consumir una persona diariamente en caso de que desee adelgazar. \n")
     peso = float(input("Ingrese el peso de la persona (en kilogramos):"))
@@ -57,8 +62,9 @@ def calculo_calorias_adelgazar():
     c = calc.consumo_calorias_recomendado_para_adelgazar(peso, altura, edad, valor_genero)
     print(c)
     
-########################################################################################
+############################################################################################################################################
 
+#Se realiza un menu para interactuar con el usuario
 def mostrar_menu():
     print("Bienvenidos a la Calculadora de Indices Corporales!!!")
     print("Seleccione una opción:")
@@ -71,8 +77,9 @@ def mostrar_menu():
     opcion = input("Opción seleccionada:")
     return opcion
 
-########################################################################################
+###########################################################################################################################################
 
+#Se inicia la aplicacion con sus respectivas funciones
 def iniciar_aplicacion():
     continuar = True
     while continuar:
